@@ -9,7 +9,7 @@
 	<!-- SEO-->
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 <body>
@@ -17,15 +17,116 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	<![endif]-->
 	<div class="wrapper">
-		<h1>Title</h1>
-		<p>Page content</p>
+		<header class="page-header">
+			<div class="page-header__top">
+				<div class="header-links">
+					<a href="#">Über uns</a>
+					<a href="#">Redaktion</a>
+				</div>
+				<ul class="lang-switcher">
+					<li class="lang-switcher__item lang-switcher__item--active"><a href="#" class="lang-switcher__link">De</a></li>
+					<li class="lang-switcher__item"><a href="#" class="lang-switcher__link">En</a></li>
+				</ul>
+			</div>
+			<div class="page-header__inner">
+				<div class="header-logo">
+					<img src="img/logo.png" alt="Logo">
+					<div class="header-logo__slogan">
+						<span>Inform.</span>
+						<span>Connect.</span>
+						<span>Inspire.</span>
+					</div>
+				</div>
+				<nav role="navigation" class="page-header__nav nav">
+				<form class="search-form" method="GET">
+					<input type="text" name="search" placeholder="What're we looking for?">
+					<button class="search-form__btn" " type="submit">
+							<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+							<path fill="#313131" d="M15.32 15.33c-4.18 0-7.58-3.43-7.58-7.66 0-4.24 3.4-7.67 7.58-7.67 4.19 0 7.59 3.43 7.59 7.67 0 4.23-3.4 7.66-7.59 7.66zm0-13.8c-3.34 0-6.06 2.75-6.06 6.14 0 3.38 2.72 6.13 6.06 6.13 3.35 0 6.07-2.75 6.07-6.13 0-3.39-2.72-6.14-6.07-6.14zM9.73 15.2l-7.55 7.62-.02-.01c-.13.11-.3.19-.49.19-.42 0-.76-.34-.76-.77 0-.19.08-.36.2-.49l-.01-.01.02-.01c.01-.02.02-.03.04-.05l7.37-7.44c.37.35.77.68 1.2.97z"/>
+					</svg>
+					</button>
+				</form>
+					<ul class="menu">
+						<li class="menu__item"><a href="#" class="menu__link">Design+lifestyle</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Trends</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Infodelight</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Smart Living</a></li>
+					</ul>
+				
+			</nav>
+			</div>
+
+		</header>
+		<main class="main-content">
+			<section class="section">
+				<div class="column  slider">
+					<ul class="slider__list">
+						<li class="slider__item">
+							<ul class="categories__list">
+								<li class="categories__item">Design+Lifestyle</li>
+								<li class="categories__item">Smart Living</li>
+							</ul>
+							<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
+							<div class="text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut  dolor in reprehenderit in quia...</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="slider__toggles">
+						<li class="slider__toggle"><a href="#">1</a></li>
+						<li class="slider__toggle"><a href="#">2</a></li>
+						<li class="slider__toggle"><a href="#">3</a></li>
+						<li class="slider__toggle"><a href="#">4</a></li>
+						<li class="slider__toggle slider__toggle--active"><a href="#">5</a></li>
+						<li class="slider__toggle"><a href="#">6</a></li>
+					</ul>
+				</div>
+				<div class="column column--narrow">
+					<h2 class="heading">A place called Inspiration.</h2>
+					<div class="text">
+						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam voluptatem.</p>
+					</div>
+					<div class="button-group">
+						<button class="btn" type="button">Über die Autoren</button>
+						<button class="btn" type="button">Über das magazin</button>
+					</div>
+				</div>
+			</section>
+			<section  class="section">
+				<div class="column column--bg-1">
+					<div class="column__inner">
+						<ul class="categories__list">
+							<li class="categories__item">Design+Lifestyle</li>
+							<li class="categories__item">Smart Living</li>
+						</ul>
+						<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
+						<div class="text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut dolor in reprehenderit in quia...</p>
+						</div>
+					</div>
+				</div>
+				<div class="column column--bg-2">
+					<div class="column__inner">
+						<ul class="categories__list">
+							<li class="categories__item">Design+Lifestyle</li>
+							<li class="categories__item">Smart Living</li>
+						</ul>
+						<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
+						<div class="text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut dolor in reprehenderit in quia...</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section">
+				<div class="column">
+					<div id="app">
+						<h2>{{ message }}</h2>
+					</div>
+				</div>
+			</section>
+		</main>
 	</div>
-	<div id="app">
-		<h2>{{ message }}</h2>
-	</div>
-	<footer class="main-footer">
-		<p>page footer</p>
-	</footer>
 	<script src="js/build.js"></script>
 </body>
 </html>

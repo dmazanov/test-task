@@ -1,0 +1,72 @@
+.section {
+	display: flex;
+	margin-bottom: 2px;
+	@include tablets {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+}
+
+.column {
+	text-align: center;
+	margin-left: 2px;
+	@include tablets {
+		margin-left: 0;
+		margin-bottom: 2px;
+	}
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.column__inner {
+	padding: 116px 18% 74px;
+
+	@include phones {
+		padding: 116px 10% 74px;
+	}
+}
+
+.slider {
+	flex-grow: 1;
+	flex-basis: 75%;
+	position:relative;
+}
+
+.column--narrow {
+	flex-basis: 25%;
+	padding: 16px 30px 20px;
+	background-color: #323232;
+	text-align: left;
+	@include tablets {
+		text-align: center;
+		padding-left: 18%;
+		padding-right: 18%;
+	}
+	@include phones {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.button-group {
+		display: flex;
+		flex-direction: column;
+		width: 150px;
+		@include tablets {
+			margin: 0 auto;
+		}
+
+		.btn {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.column--bg-1 {
+	background: url('../img/column-bg-1.jpg') no-repeat;
+	background-size: cover;
+}
+.column--bg-2 {
+	background: url('../img/column-bg-2.jpg') no-repeat;
+	background-size: cover;
+}

@@ -1,1 +1,13 @@
 @import 'base/_normalize';
+@import 'base/variables';
+@import 'base/_mixins';
+@import 'base/_base';
+@import '_header';
+@import '_lang-switcher';
+@import '_navigation';
+@import '_btn';
+@import '_forms';
+@import '_layouts';
+@import '_sliders';
+@import '_typography';
+@import '_categories__list';

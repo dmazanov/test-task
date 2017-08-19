@@ -1,0 +1,39 @@
+
+.slider__item {
+	padding: 110px 28% 104px;
+	background: url('../img/slider-bg.png') no-repeat;
+	background-size: cover;
+	background-position: center;
+	@include tablets {
+	padding: 110px 24% 104px;
+	}
+	@include phones {
+		padding: 110px 10% 104px;
+	}
+}
+
+.slider__toggles {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.slider__toggle {
+	margin-left: 25px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 4px;
+	height: 4px;
+	background-color: rgba(#ffffff, 0.5);
+	cursor: pointer;
+	&:first-child {
+		margin-left: 0;
+	}
+	&--active {
+		background-color: #ffffff;
+	}
+}
