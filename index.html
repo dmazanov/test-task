@@ -58,75 +58,92 @@
 
 		</header>
 		<main class="main-content">
-			<section class="section">
-				<div class="column  slider">
-					<ul class="slider__list">
-						<li class="slider__item">
+			<div id="app">
+				<section class="section">
+					<div class="column  slider">
+						<ul class="slider__list">
+							<li class="slider__item">
+								<ul class="categories__list">
+									<li class="categories__item">Design+Lifestyle</li>
+									<li class="categories__item">Smart Living</li>
+								</ul>
+								<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
+								<div class="text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut  dolor in reprehenderit in quia...</p>
+								</div>
+							</li>
+						</ul>
+						<ul class="slider__toggles">
+							<li class="slider__toggle"><a href="#">1</a></li>
+							<li class="slider__toggle"><a href="#">2</a></li>
+							<li class="slider__toggle"><a href="#">3</a></li>
+							<li class="slider__toggle"><a href="#">4</a></li>
+							<li class="slider__toggle slider__toggle--active"><a href="#">5</a></li>
+							<li class="slider__toggle"><a href="#">6</a></li>
+						</ul>
+					</div>
+					<div class="column column--narrow">
+						<h2 class="heading">A place called Inspiration.</h2>
+						<div class="text">
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam voluptatem.</p>
+						</div>
+						<form class="form chart-type-form">
+							<select id="chart-type-select" v-model="selected">
+								<option v-for="option in options" v-bind:value="option.value">
+									{{ option.text }}
+								</option>
+							</select>
+						<div class="button-group">
+							<button class="btn" type="button" v-on:click="addChart">Insert</button>
+						</div>
+						</form>
+					</div>
+				</section>
+				<section  class="section">
+					<div class="column column--bg-1">
+						<div class="column__inner">
 							<ul class="categories__list">
 								<li class="categories__item">Design+Lifestyle</li>
 								<li class="categories__item">Smart Living</li>
 							</ul>
 							<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
 							<div class="text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut  dolor in reprehenderit in quia...</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut dolor in reprehenderit in quia...</p>
 							</div>
-						</li>
-					</ul>
-					<ul class="slider__toggles">
-						<li class="slider__toggle"><a href="#">1</a></li>
-						<li class="slider__toggle"><a href="#">2</a></li>
-						<li class="slider__toggle"><a href="#">3</a></li>
-						<li class="slider__toggle"><a href="#">4</a></li>
-						<li class="slider__toggle slider__toggle--active"><a href="#">5</a></li>
-						<li class="slider__toggle"><a href="#">6</a></li>
-					</ul>
-				</div>
-				<div class="column column--narrow">
-					<h2 class="heading">A place called Inspiration.</h2>
-					<div class="text">
-						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam voluptatem.</p>
-					</div>
-					<div class="button-group">
-						<button class="btn" type="button">Über die Autoren</button>
-						<button class="btn" type="button">Über das magazin</button>
-					</div>
-				</div>
-			</section>
-			<section  class="section">
-				<div class="column column--bg-1">
-					<div class="column__inner">
-						<ul class="categories__list">
-							<li class="categories__item">Design+Lifestyle</li>
-							<li class="categories__item">Smart Living</li>
-						</ul>
-						<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
-						<div class="text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut dolor in reprehenderit in quia...</p>
 						</div>
 					</div>
-				</div>
-				<div class="column column--bg-2">
-					<div class="column__inner">
-						<ul class="categories__list">
-							<li class="categories__item">Design+Lifestyle</li>
-							<li class="categories__item">Smart Living</li>
-						</ul>
-						<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
-						<div class="text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut dolor in reprehenderit in quia...</p>
+					<div class="column column--bg-2">
+						<div class="column__inner">
+							<ul class="categories__list">
+								<li class="categories__item">Design+Lifestyle</li>
+								<li class="categories__item">Smart Living</li>
+							</ul>
+							<h2 class="heading">Was hilft mir, Energie zu sparen und Spaß zu haben, bei mir zu Hause?</h2>
+							<div class="text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut dolor in reprehenderit in quia...</p>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section class="section">
-				<div class="column">
-					<div id="app">
-						<h2>{{ message }}</h2>
+				</section>
+				<section class="section section-chart">
+					<chart></chart>
+					<div class="column">
+						<div id="bar"></div>
+					</div> 
+				</section>
+				<section class="section section-chart">
+					<div class="column">
+						<div id="line"></div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</main>
 	</div>
+	<template id="chart-template">
+		<div class="column">
+			<div id="chart"></div>
+		</div>
+	</template>
 	<script src="js/build.js"></script>
 </body>
 </html>

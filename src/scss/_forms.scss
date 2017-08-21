@@ -55,3 +55,43 @@
 		opacity: 0.6;
 	}
 }
+
+.chart-type-form {
+	width: 150px;
+	@include tablets {
+			margin: 0 auto;
+		}
+
+	select {
+		margin-bottom: 10px;
+	}
+}
+
+select {
+	display: inline-block;
+	height: 32px;
+	width: 100%;
+	padding: 0 16px;
+
+	font-family: $ff-base;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 32px;
+	color: #ffffff;
+	letter-spacing: 0.01em;
+
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+
+	border: 1px solid #ffffff;
+	cursor: pointer;
+	outline: currentColor;
+
+	background-color: transparent;
+	box-sizing: border-box;
+
+	option {
+		color: #333333;
+	}
+}

@@ -17,5 +17,8 @@
 	},
 	"browser": {
 		"vue": "vue/dist/vue.common.js"
+	},
+	"dependencies": {
+		"highcharts": "^5.0.14"
 	}
 }

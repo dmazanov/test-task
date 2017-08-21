@@ -8,9 +8,12 @@
 }
 
 .column {
+	//flex-basis: 50%;
+	max-width: 50%;
 	text-align: center;
 	margin-left: 2px;
 	@include tablets {
+		max-width: none;
 		margin-left: 0;
 		margin-bottom: 2px;
 	}
@@ -29,16 +32,23 @@
 
 .slider {
 	flex-grow: 1;
-	flex-basis: 75%;
+	max-width: 75%;
 	position:relative;
+	@include tablets {
+		max-width: none;
+	}
 }
 
 .column--narrow {
-	flex-basis: 25%;
+	max-width: 25%;
 	padding: 16px 30px 20px;
 	background-color: #323232;
 	text-align: left;
+	@include laptop {
+			padding: 16px 15px 20px;
+	}
 	@include tablets {
+		max-width: none;
 		text-align: center;
 		padding-left: 18%;
 		padding-right: 18%;
@@ -51,10 +61,6 @@
 	.button-group {
 		display: flex;
 		flex-direction: column;
-		width: 150px;
-		@include tablets {
-			margin: 0 auto;
-		}
 
 		.btn {
 			margin-bottom: 10px;
@@ -69,4 +75,24 @@
 .column--bg-2 {
 	background: url('../img/column-bg-2.jpg') no-repeat;
 	background-size: cover;
+}
+
+.section-chart {
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.column {
+		display: flex;
+		justify-content: center;
+		margin: 20px 0;
+		width: 100%;
+
+		@include lg-laptop {
+			max-width: 100%; 
+		}
+		@include tablets {
+			justify-content: flex-start;
+			overflow-x: auto;
+		}
+	}
 }
